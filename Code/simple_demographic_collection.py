@@ -431,7 +431,7 @@ def crawlDemographics(output_file_path, sleep_time):
     # first element of the following list indicates to the crawler to collect the demographics for the US only whereas second and third one are
     # the interests related to the new york times and washington post, respectively.
 
-    list_of_interests = ['all_%s' % cur_time, '6003058819532', '6003096798132']
+    list_of_interests = ['all_%s' % cur_time]
     for interest_id in list_of_interests:
         #         interest_id =  'all_%s' % cur_time
         #         crawlInterest(interest_id, destination_file_path, account, log_file, exception_log_file, sleep_time)

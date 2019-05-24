@@ -317,7 +317,7 @@ def main(argv):
                          'expats_asian',
                          'expats_latin_america',
                          'expats_russia',
-                         'expats_middle_east',
+                         'expats_midle_east',
                          'expats_south_asia'],
                'gender': ['male',
                           'female']}
@@ -427,40 +427,47 @@ def main(argv):
         # Plot Charts
         elif cond == 3:
             processData(jsonfiles, gzfiles, interests_path)
-            yaxis = []
-            lst_pol = {1: []}
-            print('-----SELECT AN OPTION-----'
-                  '\n1.Political Alignment'
-                  '\n2.Race Affinities'
-                  '\n3.Exit')
+            xaxis = []
+            yaxis = {}
+            print('\n-----SELECT AN OPTION-----')
+            print(int_print)
             n = int(input())
             # Exit
-            if n < 1 or n > 2:
+            if n < 1 or n > 7:
                 break
 
-            elif n == 1:
-                jsonfiles.reverse()
-                for entry in jsonfiles:
-                    json_interest_file = open('%s%s.json' % (interests_path, entry))
-                    values_dict = json.loads(json_interest_file.readline())
-                    for j in range(1, 6):
-                        lst_pol[j].append(round(values_dict['raw_values_dict']['political_alignment'][int_sec['political_alignment'][j-1]], 2))
-                for i in range(1, 6):
-                    plt.plot(['nov/2017',
-                              'jul/2018',
-                              'ago/2018',
-                              'dez/2018',
-                              'mai/2019'],
-                             lst_pol[i],
-                             label=int_sec['political_alignment'][i-1])
-                plt.xlabel('Collection Data :')
-                plt.ylabel('Raw Values')
-                plt.title("Political Alignment")
-                plt.legend()
-                plt.show()
-                jsonfiles.reverse()
-            elif n == 2:
-                print('')
+            print('\nRaw or Percent'
+                  '\n1.Raw'
+                  '\n2.Percent')
+            rp = int(input())
+            if rp == 1:
+                value = 'raw_values_dict'
+            elif rp == 2:
+                value = 'percent_values_dict'
+            else:
+                break
+
+            jsonfiles.reverse()
+            for entry in jsonfiles:
+                json_interest_file = open('%s%s.json' % (interests_path, entry))
+                xaxis.append('%s/%s/%s' % (entry[12:14], entry[9:11], entry[4:8]))
+                values_dict = json.loads(json_interest_file.readline())
+
+                for j in range(len(int_sec[int_prim[n-1]])):
+                    if j not in yaxis:
+                        yaxis[j] = []
+                    yaxis[j].append(round(values_dict[value][int_prim[n-1]][int_sec[int_prim[n-1]][j-1]], 2))
+
+            for i in range(len(int_sec[int_prim[n-1]])):
+                plt.plot(xaxis,
+                         yaxis[i],
+                         label=int_sec[int_prim[n-1]][i-1])
+            plt.xlabel('Collection Data :')
+            plt.ylabel(value)
+            plt.title(int_prim[n-1])
+            plt.legend()
+            plt.show()
+            jsonfiles.reverse()
 
         pause()
 

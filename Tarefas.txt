@@ -1,0 +1,7 @@
+Fazer coleta semanal.
+
+Adaptar código para coleta no Brasil
+	Retirar race e political_alignment
+
+Pesquisar códigos de interesses
+	armas, corrupção, politica, viajantes, imigrantes america latina.
