@@ -1,4 +1,0 @@
-<<<<<<<< REGULAR Exception >>>>>>>>>
-	#ELEMENTS READ: 20
-exception_msg: ('Connection aborted.', ConnectionAbortedError(10053, 'Uma conexão estabelecida foi anulada pelo software no computador host', None, 10053, None))	# exceptions: 0
-Waiting 5 minutes to restart again...

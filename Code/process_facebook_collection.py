@@ -442,8 +442,10 @@ def main(argv):
             rp = int(input())
             if rp == 1:
                 value = 'raw_values_dict'
+                legend = 'Raw Values'
             elif rp == 2:
                 value = 'percent_values_dict'
+                legend = 'Percent Values'
             else:
                 break
 
@@ -458,12 +460,26 @@ def main(argv):
                         yaxis[j] = []
                     yaxis[j].append(round(values_dict[value][int_prim[n-1]][int_sec[int_prim[n-1]][j-1]], 2))
 
+            plt.text(xaxis[0],
+                     yaxis[0][0],
+                     "%d" % 21234)
+
             for i in range(len(int_sec[int_prim[n-1]])):
+                for j in range(len(xaxis)):
+                    print(yaxis[i][j])
+                    plt.text(xaxis[j],
+                             yaxis[i][j],
+                             "%d" % yaxis[i][j])
                 plt.plot(xaxis,
                          yaxis[i],
                          label=int_sec[int_prim[n-1]][i-1])
+                plt.scatter(xaxis,
+                            yaxis[i])
+                print("%s: " % int_sec[int_prim[n-1]][i-1], yaxis[i])
+            print(xaxis)
+
             plt.xlabel('Collection Data :')
-            plt.ylabel(value)
+            plt.ylabel(legend)
             plt.title(int_prim[n-1])
             plt.legend()
             plt.show()
