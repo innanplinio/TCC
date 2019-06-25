@@ -462,7 +462,7 @@ def main(argv):
 
             plt.text(xaxis[0],
                      yaxis[0][0],
-                     "%d" % 21234)
+                     "")
 
             for i in range(len(int_sec[int_prim[n-1]])):
                 for j in range(len(xaxis)):

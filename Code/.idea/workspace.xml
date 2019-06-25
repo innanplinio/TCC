@@ -27,9 +27,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/process_facebook_collection.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+            <state relative-caret-position="306">
+              <caret line="464" column="24" lean-forward="true" selection-start-line="464" selection-start-column="24" selection-end-line="464" selection-end-column="24" />
               <folding>
+                <element signature="e#55#66#0" expanded="true" />
                 <element signature="e#222#283#0" />
                 <element signature="e#440#719#0" />
                 <element signature="e#760#6822#0" />
@@ -96,6 +97,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -107,7 +109,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -220,11 +221,12 @@
       <workItem from="1559661419188" duration="595000" />
       <workItem from="1560281006099" duration="822000" />
       <workItem from="1560834292841" duration="1284000" />
+      <workItem from="1561443169711" duration="767000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="96341000" />
+    <option name="totallyTimeSpent" value="97108000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -237,9 +239,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1633888" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16490166" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -247,7 +248,7 @@
       <window_info anchor="bottom" id="Debug" order="2" weight="0.39928058" />
       <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
-      <window_info anchor="bottom" id="Run" order="5" sideWeight="0.48940998" weight="0.34697217" />
+      <window_info anchor="bottom" id="Run" order="5" sideWeight="0.48865354" weight="0.34697217" />
       <window_info anchor="bottom" id="Docker" order="6" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
@@ -255,7 +256,7 @@
       <window_info anchor="bottom" id="Python Console" order="10" sideWeight="0.4969743" weight="0.32569557" />
       <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49848714" weight="0.32569557" />
       <window_info anchor="bottom" id="Inspection Results" order="12" weight="0.3289689" />
-      <window_info anchor="bottom" x="684" y="31" width="681" height="696" id="SciView" maximized="true" order="13" sideWeight="0.51059" side_tool="true" type="WINDOWED" weight="0.34697217" />
+      <window_info anchor="bottom" x="684" y="31" width="681" height="696" id="SciView" maximized="true" order="13" sideWeight="0.51134646" side_tool="true" type="WINDOWED" weight="0.34697217" />
       <window_info anchor="bottom" id="TODO" order="14" sideWeight="0.4977307" weight="0.32405892" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -277,8 +278,8 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/TCC$simple_demographic_collection.coverage" NAME="simple_demographic_collection Coverage Results" MODIFIED="1557510448819" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/TCC$process_facebook_collection.coverage" NAME="process_facebook_collection Coverage Results" MODIFIED="1557529741620" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Code$process_facebook_collection.coverage" NAME="process_facebook_collection Coverage Results" MODIFIED="1560834761663" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Code$simple_demographic_collection.coverage" NAME="simple_demographic_collection Coverage Results" MODIFIED="1560834299093" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Code$process_facebook_collection.coverage" NAME="process_facebook_collection Coverage Results" MODIFIED="1561443796637" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Code$simple_demographic_collection.coverage" NAME="simple_demographic_collection Coverage Results" MODIFIED="1561443174556" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/TCC$RUN.coverage" NAME="RUN Coverage Results" MODIFIED="1556558187805" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$" />
     <SUITE FILE_PATH="coverage/TCC$TEST.coverage" NAME="TEST Coverage Results" MODIFIED="1556565072720" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
@@ -345,9 +346,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/process_facebook_collection.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        <state relative-caret-position="306">
+          <caret line="464" column="24" lean-forward="true" selection-start-line="464" selection-start-column="24" selection-end-line="464" selection-end-column="24" />
           <folding>
+            <element signature="e#55#66#0" expanded="true" />
             <element signature="e#222#283#0" />
             <element signature="e#440#719#0" />
             <element signature="e#760#6822#0" />
