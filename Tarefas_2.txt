@@ -1,0 +1,17 @@
+1 - Escrita da monografia
+	. Detalhamento de revisão bibliográfica
+	. Introdução, trabalhos relacionados, metodologia.
+
+
+2 - Definir atributos a serem coletados no Brasil
+	. {armas, corrupção, politica, viajantes, imigrantes america latina}
+	. Nível Educacional
+	. Etinias (Não disponível, BR)
+	. Relacionamento
+	.
+
+3 - Modificar código e começar as coletas
+	. Códigos de País, Estados e Atributos
+
+4 - Análise de dados já coletados dos EUA
+	. Metodologia para análise
