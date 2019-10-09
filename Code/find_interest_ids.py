@@ -3,8 +3,10 @@ __author__ = "Filipe Ribeiro"
 
 from facebookads.adobjects.adaccount import AdAccount
 from facebookads.adobjects.adset import AdSet
-from facebookads.adobjects.targetingsearch import TargetingSearch
-from facebookads.api import FacebookAdsApi
+#from facebookads.adobjects.targetingsearch import TargetingSearch
+#from facebookads.api import FacebookAdsApi
+from facebook_business.api import FacebookAdsApi
+from facebook_business.adobjects.targetingsearch import TargetingSearch
 # import facebookads.adobjects.targeting.Targeting
 from facebookads.exceptions import FacebookError
 from unicodedata import normalize
@@ -91,8 +93,8 @@ def testSearchForLocationCode(api):
 #     print resp 
 # 
     resp = getLocationElement(api, "Italy", location_type="country") 
-    print '###### Searching for country - Canada #######'
-    print resp 
+    print('###### Searching for country - Canada #######')
+    print(resp)
 
 ####################################################################################
 ######################## validating interests for a given list
@@ -102,8 +104,8 @@ def  testeValidateInterests(api):
     interests_list = ['6003602262503','6003136682117','6003262996193', '6003058819532']
     resp = validateInterestIdByInterest(api, interests_list)
     for valid_element in resp: 
-        print '******* valid *******'
-        print valid_element["id"]  
+        print('******* valid *******')
+        print(valid_element["id"])
            
 
 ####################################################################################
@@ -112,15 +114,15 @@ def  testeValidateInterests(api):
 def testSuggestions(api):
     list_of_interests_to_search = ["Classic Music"]
     for interest in list_of_interests_to_search:
-        print '**********  SUGGESTIONS SEARCHING FOR %s  **********'  % interest       
+        print('**********  SUGGESTIONS SEARCHING FOR %s  **********'  % interest)
         search_result = getSuggestions(api, interest)
 #         print search_result
         
         for element in search_result: 
-            print "*********** NEW INTEREST *************"
-            print "interest_id: %s" % element["id"]  
-            print "name: %s" % element["name"] 
-            print "audience_size: %s" % element["audience_size"]         
+            print("*********** NEW INTEREST *************")
+            print("interest_id: %s" % element["id"])
+            print("name: %s" % element["name"])
+            print("audience_size: %s" % element["audience_size"])
 #     getSuggestions("Web counter")
 #     getSuggestionsBehaviors("school")    
 
@@ -139,7 +141,7 @@ def testValidateInterest(facebook_api):
         'locale':'en_US'
     }
     resp = TargetingSearch.search(params=params, api=facebook_api)
-    print resp        
+    print(resp)
     
     
 
@@ -150,17 +152,17 @@ def testInterestSearch(api):
 #     list_of_interests_to_search = ["Ciro Gomes", "Feijoada", "Politics"]
     list_of_interests_to_search = ["Catolicismo"]
     for interest in list_of_interests_to_search:
-        print '**********  SEARCHING FOR %s  **********'  % interest       
+        print('**********  SEARCHING FOR %s  **********'  % interest)
         search_result = getInterestIDFromText(api, interest)
 #         print search_result
          
         for element in search_result: 
-            print "*********** NEW INTEREST *************"            
-            print "interest_id: %s" % element["id"]  
-            print "name: %s" % element["name"] 
-            print "audience_size: %s" % element["audience_size"]
-            print "category: %s" % (element['disambiguation_category']  if 'disambiguation_category' in element else '-')
-            print "topic: %s" % element['topic']  if 'topic' in element else '-'              
+            print("*********** NEW INTEREST *************")
+            print("interest_id: %s" % element["id"])
+            print("name: %s" % element["name"])
+            print("audience_size: %s" % element["audience_size"])
+            print("category: %s" % (element['disambiguation_category']  if 'disambiguation_category' in element else '-'))
+            print("topic: %s" % element['topic']  if 'topic' in element else '-')
 #             not all responses have a topic and category defined.  
 #             print "topic: %s" % element["topic"] 
 #             print "disambiguation_category: %s" % element["disambiguation_category"]     

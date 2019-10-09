@@ -10,6 +10,22 @@ __author__ = "Filipe Ribeiro"
 # after reducing  2×4×4×3×4×4×4×4×3 = 73728 (still high)
 
 # Targeting spec template to be used
+targeting_spec_br = {
+    "geo_locations": {"countries":["BR"]},
+    "publisher_platforms": ["facebook", "instagram"],
+    "facebook_positions": ["feed", "instream_video"], #feed, right_hand_column
+    "device_platforms": ["mobile", "desktop"],
+    "excluded_publisher_categories": [],
+    "excluded_publisher_list_ids": [],
+    "user_device": [],
+    "excluded_user_device": [],
+    "user_os": [],
+    "wireless_carrier": [],
+    'behaviors': [],
+    'interests': [],
+    "flexible_spec": []
+}
+
 targeting_spec = {
 #     "geo_locations": {"countries":["US"]},
 #     new york state
@@ -137,6 +153,7 @@ brazilian_regions={
 }
 
 expats_all_facebook={
+    'expats': [{"id":"6015559470583" , "name":"Expats (All)"}],
     'expats_india': [{'id':'6016916298983', 'name':'Expats (India)'}],
     'expats_kenya': [{'id':'6018796980983', 'name':'Expats (Kenya)'}],
     'expats_nigeria': [{'id':'6018797004183', 'name':'Expats (Nigeria)'}],
