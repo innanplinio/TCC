@@ -106,7 +106,8 @@ def collection(account):
     output_file.flush()
     time.sleep(sleep_time)
 
-    """
+
+
     ################## EXPATS_ALL_FACEBOOK #################
     for expats in search_elements.expats_all_facebook:
         flexible_spec = []
@@ -120,7 +121,7 @@ def collection(account):
         time.sleep(sleep_time)
     del targeting_spec['flexible_spec']
     print('Finished expats_all_facebook')
-    """
+    
 
 
     ################## EXPATS_NEW #####################
@@ -130,7 +131,7 @@ def collection(account):
         flexible_spec.append({'behaviors': behaviors_expats})
         targeting_spec['flexible_spec'] = flexible_spec
         number = make_request(account,targeting_spec)
-        results_row = ['expats', expats, number]
+        results_row = ['expats_grouped', expats, number]
         writer.writerow(results_row)
         output_file.flush()
         time.sleep(sleep_time)
@@ -150,6 +151,24 @@ def collection(account):
         time.sleep(sleep_time)
     del targeting_spec['education_statuses']
     print('Finished education')
+
+
+     ################ EDUCATIONAL_STATUSES_GROUPED ##############
+
+    targeting_spec['education_statuses'] = [12]
+    results_row = ['scholarities_grouped', 'unspecified', make_request(account, targeting_spec)]
+    writer.writerow(results_row)
+    output_file.flush()
+    time.sleep(sleep_time)
+    for field in search_elements.education_status_grouped_brazil:
+        targeting_spec['education_statuses'] = search_elements.education_status_grouped_brazil2[field]
+        number = make_request(account, targeting_spec)
+        results_row = ['scholarities_grouped', field, number]
+        writer.writerow(results_row)
+        output_file.flush()
+        time.sleep(sleep_time)
+    del targeting_spec['education_statuses']
+    print('Finished education_grouped')
 
 
 
@@ -189,6 +208,27 @@ def collection(account):
         time.sleep(sleep_time)
     del targeting_spec['interests']
     print('Finished religions')
+
+
+    ############## AGE_INTERVALS ###############
+    for age in search_elements.age_intervals:
+        if 'age_min' in targeting_spec:
+            del targeting_spec['age_min']
+        if 'age_max' in targeting_spec:
+            del targeting_spec['age_max']
+        targeting_spec['age_min'] = search_elements.age_intervals[age]['age_min']
+        if (age != 'old_2' and age != 'educational_age' and age != 'all'):
+            targeting_spec['age_max'] = search_elements.age_intervals[age]['age_max']
+        number = make_request(account, targeting_spec)
+        results_row = ['age_interval', age, number]
+        writer.writerow(results_row)
+        output_file.flush()
+        time.sleep(sleep_time)
+    if 'age_min' in targeting_spec:
+        del targeting_spec['age_min']
+    if 'age_max' in targeting_spec:
+        del targeting_spec['age_max']
+    print('Finished age intervals')
 
 
     

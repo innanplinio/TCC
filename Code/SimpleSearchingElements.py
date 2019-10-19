@@ -835,6 +835,7 @@ age_intervals = {
 }
 
 age_intervals_education_level = {
+    'all':{'age_min': 18},
     'educational_age': {'age_min':25},
     'adolescent' :{'age_min': 13, 'age_max': 17},
     'young_1' :{'age_min': 18, 'age_max': 24},
@@ -909,6 +910,11 @@ education_status_grouped_brazil = {
     "incomplete_high_school":['high_school','SOME_HIGH_SCHOOL'],                                                  
     "high_school":['HIGH_SCHOOL_GRAD','UNDERGRAD', 'SOME_COLLEGE'],
     'college':['IN_GRAD_SCHOOL','SOME_GRAD_SCHOOL','MASTER_DEGREE','PROFESSIONAL_DEGREE','DOCTORATE_DEGREE','ALUM','ASSOCIATE_DEGREE'],               
+}
+education_status_grouped_brazil2 = {
+    "incomplete_high_school":[1, 13],
+    "high_school":[4, 2, 5],
+    "college":[7, 8, 9, 10, 11, 3, 6],
 }
 
 education_status_grouped_2 = {  
