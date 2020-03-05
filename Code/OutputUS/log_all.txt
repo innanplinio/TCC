@@ -1,8 +1,8 @@
-Execution initialized: 2019-11-12--19-15-45 
+Execution initialized: 2020-03-04--21-17-10 
 ************* FACEBOOK PAGE *************
-all_2019-11-12--19-15-45
+all_2020-03-04--21-17-10
 Facebook interest finished
 total of interest ids: 1 
 total of requests: 53 
 total of exceptions: 0 
-Execution finalized: 2019-11-12--19-16-51 
+Execution finalized: 2020-03-04--21-18-28 
