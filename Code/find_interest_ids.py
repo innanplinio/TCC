@@ -1,23 +1,17 @@
 # -*- coding: utf-8 -*-
 __author__ = "Filipe Ribeiro"
 
-from facebookads.adobjects.adaccount import AdAccount
-from facebookads.adobjects.adset import AdSet
-#from facebookads.adobjects.targetingsearch import TargetingSearch
-#from facebookads.api import FacebookAdsApi
-from facebook_business.api import FacebookAdsApi
 from facebook_business.adobjects.targetingsearch import TargetingSearch
-# import facebookads.adobjects.targeting.Targeting
-from facebookads.exceptions import FacebookError
-from unicodedata import normalize
+# from facebookads.adobjects.targetingsearch import TargetingSearch
+# from facebookads.api import FacebookAdsApi
+from facebook_business.api import FacebookAdsApi
 
-import json, os, sys
-import time, gzip
+# import facebookads.adobjects.targeting.Targeting
 
 # https://developers.facebook.com/docs/marketing-api/targeting-search/
 
-token = "-"
-act_id = "-"
+token = "EAAbPAyrnxo0BAEzRou8xgETD7tR4W1g4i0DQr5Nt4xEZCyuT3Akuc9SEMRGSKHG71t970Cr3FtdsDCxiOZAcJHWGWUXfERkK0vm03xqd1EOhTmZBaUuPMa9uxCQOF8iDKlMdd73gXzMrjj1RpQ6FFX90bCFZBC8ZD"
+act_id = "140203616062598"
 secret = "-"
 
 def getFacebookAPI(token, act_id, secret):
@@ -101,7 +95,7 @@ def testSearchForLocationCode(api):
 ### interests may be excluded and must be validated from time to time
 #################################################################################### 
 def  testeValidateInterests(api):
-    interests_list = ['6003602262503','6003136682117','6003262996193', '6003058819532']
+    interests_list = ['6015760532183']
     resp = validateInterestIdByInterest(api, interests_list)
     for valid_element in resp: 
         print('******* valid *******')
@@ -112,7 +106,7 @@ def  testeValidateInterests(api):
 ######################## searching for suggestions for a given text
 #################################################################################### 
 def testSuggestions(api):
-    list_of_interests_to_search = ["Classic Music"]
+    list_of_interests_to_search = ["moderate"]
     for interest in list_of_interests_to_search:
         print('**********  SUGGESTIONS SEARCHING FOR %s  **********'  % interest)
         search_result = getSuggestions(api, interest)
@@ -134,7 +128,7 @@ def testSuggestions(api):
 def testValidateInterest(facebook_api):
 #     list_of_interests_to_validate = ["6002936693259", "6002839660079"]
 #     list_of_interests_to_validate = ["6003184467302", "6003093235817", "6003331774171", "6003300230060"]
-    list_of_interests_to_validate = ["6003394696925"]
+    list_of_interests_to_validate = ['6015760532183']
     params = {
         'type': 'adinterestvalid',
         'interest_fbid_list': list_of_interests_to_validate,
@@ -150,7 +144,7 @@ def testValidateInterest(facebook_api):
 ####################################################################################   
 def testInterestSearch(api): 
 #     list_of_interests_to_search = ["Ciro Gomes", "Feijoada", "Politics"]
-    list_of_interests_to_search = ["Catolicismo"]
+    list_of_interests_to_search = ["liberal"]
     for interest in list_of_interests_to_search:
         print('**********  SEARCHING FOR %s  **********'  % interest)
         search_result = getInterestIDFromText(api, interest)
@@ -170,9 +164,10 @@ def testInterestSearch(api):
 
 def main():
         
-    facebook_api = getFacebookAPI(token, act_id, secret)   
-    testInterestSearch(facebook_api)
-#     testSuggestions(facebook_api)
+    facebook_api = getFacebookAPI(token, act_id, secret)
+#    testInterestSearch(facebook_api)
+#    testeValidateInterests(facebook_api)
+#    testSuggestions(facebook_api)-
 #     testeValidateInterests(facebook_api)
 #     testSearchForLocationCode(facebook_api)
 #     testValidateInterest(facebook_api)

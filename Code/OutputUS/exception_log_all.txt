@@ -1,0 +1,18 @@
+<<<<<<<< Exception >>>>>>>>>
+	# exceptions: 1
+	#ELEMENTS READ: 14
+	error_type: OAuthException
+	error_code: 100
+	error_type: Invalid parameter
+	error_type:api_params {'targeting_spec': {'geo_locations': {'countries': ['US']}, 'publisher_platforms': ['facebook', 'instagram'], 'facebook_positions': ['feed', 'instream_video'], 'device_platforms': ['mobile', 'desktop'], 'excluded_publisher_categories': [], 'excluded_publisher_list_ids': [], 'user_device': [], 'excluded_user_device': [], 'user_os': [], 'wireless_carrier': [], 'behaviors': [], 'interests': [], 'flexible_spec': [{'politics': [{'id': '6015760532183', 'name': 'US politics (conservative)'}]}], 'age_min': 13}}
+	all_2020-09-29--15-17-02
+Waiting 5.00 minutes to restart again...
+<<<<<<<< Exception >>>>>>>>>
+	# exceptions: 2
+	#ELEMENTS READ: 14
+	error_type: OAuthException
+	error_code: 100
+	error_type: Invalid parameter
+	error_type:api_params {'targeting_spec': {'geo_locations': {'countries': ['US']}, 'publisher_platforms': ['facebook', 'instagram'], 'facebook_positions': ['feed', 'instream_video'], 'device_platforms': ['mobile', 'desktop'], 'excluded_publisher_categories': [], 'excluded_publisher_list_ids': [], 'user_device': [], 'excluded_user_device': [], 'user_os': [], 'wireless_carrier': [], 'behaviors': [], 'interests': [], 'flexible_spec': [{'politics': [{'id': '6015760532183', 'name': 'US politics (conservative)'}]}], 'age_min': 13}}
+	all_2020-09-29--15-17-02
+Waiting 10.00 minutes to restart again...
