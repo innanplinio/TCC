@@ -39,9 +39,9 @@ def getCurrentTime():
 def get_ad_account():
     
     if secret != '-':
-        FacebookAdsApi.init(access_token=token, app_secret=secret, api_version='v6.0')
+        FacebookAdsApi.init(access_token=token, app_secret=secret, api_version='v8.0')
     else:
-        FacebookAdsApi.init(access_token=token, api_version='v6.0')
+        FacebookAdsApi.init(access_token=token, api_version='v8.0')
     account = AdAccount('act_' + act_id)
     return account
 
