@@ -1,8 +1,8 @@
-Execution initialized: 2021-05-11--02-08-55 
+Execution initialized: 2021-07-19--19-03-29 
 ************* FACEBOOK PAGE *************
-all_2021-05-11--02-08-55
+all_2021-07-19--19-03-29
 Facebook interest finished
 total of interest ids: 1 
 total of requests: 44 
 total of exceptions: 0 
-Execution finalized: 2021-05-11--02-09-51 
+Execution finalized: 2021-07-19--19-04-30 
