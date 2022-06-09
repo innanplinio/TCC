@@ -1,0 +1,14 @@
+all,BR,130000000
+scholarities,high_school,1900000
+scholarities,UNDERGRAD,4900000
+scholarities,ALUM,33000000
+scholarities,HIGH_SCHOOL_GRAD,20000000
+scholarities,SOME_COLLEGE,4800000
+scholarities,ASSOCIATE_DEGREE,1000
+scholarities,IN_GRAD_SCHOOL,280000
+scholarities,SOME_GRAD_SCHOOL,340000
+scholarities,MASTER_DEGREE,1700000
+scholarities,PROFESSIONAL_DEGREE,60000
+scholarities,DOCTORATE_DEGREE,5100
+scholarities,UNSPECIFIED,54000000
+scholarities,SOME_HIGH_SCHOOL,4600000

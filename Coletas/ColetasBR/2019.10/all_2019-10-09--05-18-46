@@ -1,0 +1,13 @@
+all,BR,130000000
+relationship,single,24000000
+relationship,in_relationship,13000000
+relationship,engaged,1700000
+relationship,married,29000000
+relationship,civil_union,510000
+relationship,domestic_partnership,620000
+relationship,open_relationship,240000
+relationship,complicated,190000
+relationship,separated,400000
+relationship,divorced,580000
+relationship,widowed,430000
+relationship,unspecified,56000000
